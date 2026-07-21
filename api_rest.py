@@ -119,8 +119,8 @@ def delete_book(id:int):
     if id> 0 and id<= len(books):
         del books[id-1]
         #ordena os livros após a exclusão com ≃ O(n)
-        for book in books:
-            book['id']= books.index(book)+1
+        for index, book in enumerate(books):
+            book['id']= index+1
         save_books(books)
         return jsonify(books)
     else:
