@@ -30,5 +30,8 @@ Tentei fazer a maior parte do código em inglês, já que o dominio dele é apre
 
 ## ⚙️ Como Executar
 
+## ⚙️ Como Executar
+
 1. **Clone o repositório:**
-   ```bash [git clone https://github.com/Cavalcante62/api_rest.git](git clone https://github.com/Cavalcante62/api_rest.git)
+   ```bash
+   git clone [https://github.com/Cavalcante62/api_rest.git](https://github.com/Cavalcante62/api_rest.git)
