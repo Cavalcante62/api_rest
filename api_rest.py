@@ -60,7 +60,7 @@ def binary_search(num:int, l:list):
         guess= (smaller+bigger)//2
     return guess-1
 
-books= upload_books()
+books:list[dict]= upload_books()
 
 # Função para retornar todos os livros do inventário
 @app.route('/livros', methods= ['GET'])
@@ -118,6 +118,9 @@ def delete_book(id:int):
     
     if id> 0 and id<= len(books):
         del books[id-1]
+        #ordena os livros após a exclusão com ≃ O(n)
+        for book in books:
+            book['id']= books.index(book)+1
         save_books(books)
         return jsonify(books)
     else:
