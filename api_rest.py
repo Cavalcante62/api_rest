@@ -105,7 +105,8 @@ def add_book():
     Recive a book by .json from user and append in de current list of books
     '''
     new_book= request.get_json()
-    new_book['id']= len(books)+1 #isso garante que o id dos livros se mantenha ordenado
+    #garante que o id dos livros se mantenha ordenado
+    new_book['id']= len(books)+1
     books.append(new_book)
     save_books(books)
     return jsonify(books)
